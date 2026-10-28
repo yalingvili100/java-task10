@@ -1,4 +1,4 @@
 FROM eclipse-temurin:11-jdk
 WORKDIR /app
-COPY src/main/java/com/example/HelloWorld.java .
-CMD [ "java", "HelloWorld.java" ]
+COPY target/*.jar app.jar
+CMD ["java", "-jar", "app.jar"]
